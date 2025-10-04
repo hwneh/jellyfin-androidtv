@@ -31,7 +31,7 @@ import org.jellyfin.sdk.model.serializer.toUUID
 import timber.log.Timber
 import java.time.Instant
 import java.util.UUID
-import org.jellyfin.sdk.model.api.BrandingOptions as BrandingOptionsDto
+import org.jellyfin.sdk.model.api.BrandingOptionsDto
 
 /**
  * Repository to maintain servers.

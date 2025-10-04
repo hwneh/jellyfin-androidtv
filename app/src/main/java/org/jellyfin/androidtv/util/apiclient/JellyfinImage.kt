@@ -8,6 +8,7 @@ import org.jellyfin.sdk.model.api.ImageType
 import org.jellyfin.sdk.model.api.UserDto
 import org.jellyfin.sdk.model.serializer.toUUIDOrNull
 import java.util.UUID
+import kotlin.uuid.toKotlinUuid
 
 /**
  * Utility class used to collect information about images in Jellyfin API responses to easily pass around the app.
@@ -99,7 +100,7 @@ val BaseItemDto.itemBackdropImages
 
 val BaseItemDto.parentImages
 	get() = mapOf(
-		ImageType.PRIMARY to (parentPrimaryImageItemId?.toUUIDOrNull() to parentPrimaryImageTag),
+		ImageType.PRIMARY to (parentPrimaryImageItemId to parentPrimaryImageTag),
 		ImageType.LOGO to (parentLogoItemId to parentLogoImageTag),
 		ImageType.ART to (parentArtItemId to parentArtImageTag),
 		ImageType.THUMB to (parentThumbItemId to parentThumbImageTag),
